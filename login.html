@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel="icon" type="image/png" href="/img/flavicon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="/scripts/script.js"></script>
+        
+        <!--*Navbar-->
+        <nav class="navbar">
+            <div class="logo">
+                <div class="container">
+                    <a href="/home.html">
+                        <img src="/img/logo.png" alt="Logo Image" id="logo_image">
+                    </a>
+                </div>
+                <div class="container">
+                    <p id="logo_title">Here and There Recipes</p>
+                </div>
+            </div>
+            <ul class="nav_links" id="nav_links_login">
+                <li><a href="/home.html">HOME</a></li>
+                <li><a href="/browse.html">BROWSE</a></li>
+                <li id="login_link"><a href="/login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- <div class="page_content">
+                <div class="border-black empty_page">
+                    <img src="/img/under_development.png" alt="under development">
+                    <p>Oops... Looks like this page is still under development.</p>
+                </div>
+            </div> -->
+
+            <div class="page_title">
+                <h1>LOGIN</h1>
+                <hr>
+            </div>
+
+            <div class="page_content" id="login_page">
+                <form id="login_form">
+                    <div class="border-black" id="login_form_container">
+                        <p id="login_error_message"></p>
+                        <label>Username: </label>
+                        <input type="text" placeholder="Enter Username..." name="username" id="input_username">
+                        <label>Password: </label>
+                        <input type="text" placeholder="Enter Password..." name="password" id="input_password">
+                        <div id="login_form_buttons">
+                            <button type="button" id="btn_login">Login</button>
+                        </div>   
+                       <div class="center" id="forgot_password">
+                            <p><u>Forgot Password?</u></p>
+                       </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script src="/scripts/script.js"></script>
+    </body>
+</html>
