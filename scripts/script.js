@@ -37,15 +37,15 @@ function likedClicked (){
 
     let source = this.getAttribute("src"); 
 
-    if (source == "/img/heart.png"){
+    if (source == "img/heart.png"){
         like_count++;
         updateLikes(like_count);
-        this.src = "/img/heart_liked.png";
+        this.src = "img/heart_liked.png";
     }
     else {
         like_count--;
         updateLikes(like_count);
-        this.src = "/img/heart.png";
+        this.src = "img/heart.png";
     }
 }
 
@@ -60,15 +60,15 @@ function dislikeClicked (){
 
     let source = this.getAttribute("src"); 
 
-    if (source == "/img/dislike_clear.png"){
+    if (source == "img/dislike_clear.png"){
         dislike_count++;
         updateDislikes(dislike_count);
-        this.src = "/img/dislike_filled.png";
+        this.src = "img/dislike_filled.png";
     }
     else {
         dislike_count--;
         updateDislikes(dislike_count);
-        this.src = "/img/dislike_clear.png";
+        this.src = "img/dislike_clear.png";
     }
 }
 
@@ -159,8 +159,8 @@ function loginVerification (usrn, pwd){
 
         let navLinks = document.getElementById('nav_links_login');
         document.getElementById("login_link").remove();
-        navLinks.innerHTML += '<li><a href="/myrecipes.html">MY RECIPES</a></li>';
-        navLinks.innerHTML += '<li><a href="/profile.html">PROFILE</a></li>';
+        navLinks.innerHTML += '<li><a href="myrecipes.html">MY RECIPES</a></li>';
+        navLinks.innerHTML += '<li><a href="profile.html">PROFILE</a></li>';
 
         let message = document.getElementById("login_error_message");
         message.style.color = '#008724';
@@ -406,8 +406,8 @@ function addIngredientClicked (){
     if (ingredient_input.length > 0){
         ingredients_div.innerHTML += `
             <div class="list_item">
-                <p><img src="/img/food.png" alt="beef">${ingredient_input}</p>
-                <img src="/img/trash.png" alt="delete">
+                <p><img src="img/food.png" alt="beef">${ingredient_input}</p>
+                <img src="img/trash.png" alt="delete">
             </div>
         `;
     }
@@ -446,7 +446,7 @@ function addInstructionClicked (){
                     <p>${stepCounter}</p>
                     <p>${instruction_input}</p>
                 </div>
-                <img src="/img/trash.png" alt="delete">
+                <img src="img/trash.png" alt="delete">
             </div>
         `;
     }
@@ -528,13 +528,13 @@ async function recipeData(Data)
     for (var i = 0; i < 4; i++) {   
         browse_item_titles[i].innerText = Data.hits[i].recipe.label;
         browse_item_image[i].src = Data.hits[i].recipe.image;
-        browse_item_flags[i].src = `/img/${Data.hits[i].recipe.cuisineType[0]}_flag.png`;
+        browse_item_flags[i].src = `img/${Data.hits[i].recipe.cuisineType[0]}_flag.png`;
     }
 }
 
 //Event and function for when a user clicks on the "Learn More" or "About" button (opens profile page)
 function openProfile() {
-    window.open("/profile.html", "_self");
+    window.open("profile.html", "_self");
 }
 
 var learn_more_chef = document.getElementsByClassName("btn_learn_more_chef");
@@ -547,7 +547,7 @@ if (learn_more_chef != null) {
 //Event and function for when a user clicks on "View" recipe button (opens recipe page)
 function openRecipe() {
     console.log("What");
-    window.open("/recipe.html", "_parent");
+    window.open("recipe.html", "_parent");
 }
 
 var view_recipes = document.getElementsByClassName("btn_view_recipe");
